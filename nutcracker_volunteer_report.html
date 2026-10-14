@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marin Ballet Nutcracker 2026 - Parent Volunteer Strategic Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0b0f19;
+    --bg-secondary: #121826;
+    --bg-card: #182234;
+    --bg-hover: #1f2d45;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-gold: #f59e0b;
+    --accent-gold-light: #fef3c7;
+    --accent-blue: #38bdf8;
+    --accent-rose: #f43f5e;
+    --accent-emerald: #10b981;
+    --accent-purple: #a855f7;
+    --border-color: #243048;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+/* Header Banner */
+.header-banner {
+    background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+    border: 1px solid #312e81;
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+.header-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0) 70%);
+    pointer-events: none;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-gold);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.header-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.header-subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 860px;
+    margin-bottom: 24px;
+}
+
+.meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.meta-item strong {
+    color: #fff;
+}
+
+/* Quick Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 22px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Strategy Box */
+.strategy-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-gold);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+
+.strategy-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.strategy-col {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.strategy-col h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.strategy-col p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Filter Controls */
+.controls-panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn:hover {
+    background: var(--bg-hover);
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #2563eb;
+    color: #fff;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.filter-btn.active.male {
+    background: #0284c7;
+    border-color: #38bdf8;
+}
+
+.filter-btn.active.female {
+    background: #db2777;
+    border-color: #f472b6;
+}
+
+.filter-btn.active.zero {
+    background: #059669;
+    border-color: #34d399;
+}
+
+.filter-btn.active.excluded {
+    background: #475569;
+    border-color: #64748b;
+}
+
+.search-box {
+    position: relative;
+    min-width: 280px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px 10px 38px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+    border-color: var(--accent-gold);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+/* Slots Table / Cards */
+.table-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+thead th {
+    background: #151e2e;
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.15s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+td {
+    padding: 16px 20px;
+    vertical-align: middle;
+}
+
+/* Specific table columns */
+.role-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.role-comment {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    max-width: 380px;
+}
+
+.date-time {
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.date-badge {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.location-badge {
+    display: inline-block;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-open {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-full {
+    background: rgba(148, 163, 184, 0.12);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.badge-top {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-female {
+    background: rgba(244, 63, 94, 0.15);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.badge-conflict-none {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badge-conflict-high {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.badge-conflict-mod {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.rationale-text {
+    font-size: 13px;
+    color: #cbd5e1;
+    max-width: 320px;
+    line-height: 1.45;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: #0f172a;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    font-size: 14px;
+}
+
+.cta-button:hover {
+    background: #f59e0b;
+    transform: translateY(-1px);
+}
+
+/* Section Headings */
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 40px 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.disclaimer-box {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    color: #fca5a5;
+    font-size: 14px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 16px;
+    }
+    .header-banner {
+        padding: 24px;
+    }
+    .header-title {
+        font-size: 28px;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+    table {
+        min-width: 800px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <div class="header-badge">⭐ Live SignUpGenius Intelligence</div>
+        <h1 class="header-title">Nutcracker 2026: Parent Volunteer Strategic Guide</h1>
+        <p class="header-subtitle">
+            A comprehensive, data-backed analysis of all <strong>150 volunteer slots</strong> across all 6 paginated sections of the Marin Ballet SignUpGenius. Specifically engineered to balance volunteer obligations while ensuring parents <strong>never miss their dancer on stage</strong> and are <strong>available when their performer needs them most</strong>.
+        </p>
+        <div class="meta-bar">
+            <div class="meta-item">📍 <strong>Production:</strong> Marin Ballet Nutcracker</div>
+            <div class="meta-item">📅 <strong>Performances:</strong> Dec 5 & 6 (1:00 PM & 5:00 PM)</div>
+            <div class="meta-item">🎟️ <strong>Analyzed Slots:</strong> 150 slot items (All 6 Pages Navigated)</div>
+            <div class="meta-item">👤 <strong>Coordinator:</strong> Stephanie Taubert</div>
+            <div class="meta-item" style="margin-left:auto;">
+                <a class="cta-button" href="https://m.signupgenius.com/#!/showSignUp/10C0C4BA9A929A7FA7-66294307-nutcracker?useFullSite=false" target="_blank">Open Live SignUpGenius ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-label">Total Unique Slot Items</div>
+            <div class="stat-value">150</div>
+            <div class="stat-desc">Extracted across 6 paginated API pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Currently Open Spots</div>
+            <div class="stat-value" style="color: #34d399;">131</div>
+            <div class="stat-desc">Available for immediate sign up</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Male Parent Top Picks</div>
+            <div class="stat-value" style="color: #38bdf8;">25</div>
+            <div class="stat-desc">Zero dressing room & zero performance conflict</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Female Parent Top Picks</div>
+            <div class="stat-value" style="color: #f472b6;">64</div>
+            <div class="stat-desc">Dressing room & front-of-house opportunities</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Filtered Out / Conflicts</div>
+            <div class="stat-value" style="color: #f87171;">57</div>
+            <div class="stat-desc">Props, security & beverage conflicts removed</div>
+        </div>
+    </div>
+
+    <!-- The 3 Parent Strategies -->
+    <div class="strategy-card">
+        <div class="strategy-title">
+            🎯 Strategic Rules of Engagement for Ballet Parents
+        </div>
+        <p style="color: var(--text-secondary); font-size: 15px;">
+            How to satisfy school volunteer quotas without sacrificing your family's experience:
+        </p>
+        <div class="strategy-grid">
+            <div class="strategy-col">
+                <h4>1. The "Opposite-Cast" Hack</h4>
+                <p>
+                    Dancers almost never perform in all 4 shows (Sat 1pm/5pm, Sun 1pm/5pm). If your performer dances in <strong>Cast A (e.g. Sat 1pm & Sun 5pm)</strong>, volunteer during <strong>Cast B (Sat 5pm or Sun 1pm)</strong>! You watch your child's shows 100% free as a spectator.
+                </p>
+            </div>
+            <div class="strategy-col">
+                <h4>2. The "Front-of-House Watch" Roles</h4>
+                <p>
+                    <strong>Boutique Sales</strong> explicitly permits volunteers to sit and watch the performance! <strong>Ticket Scanner</strong> shifts end right as the curtain rises (1:15pm or 5:15pm). <strong>Parent Ushers</strong> can stand and watch from the back of the auditorium.
+                </p>
+            </div>
+            <div class="strategy-col">
+                <h4>3. The "Zero Show-Day Conflict" Roles</h4>
+                <p>
+                    Want zero stress on performance weekend? Take <strong>Clean Up Crew</strong> (Sunday 7:00pm–8:30pm after all shows wrap) or <strong>Wardrobe Prep/Packup</strong>. You satisfy all hours outside of performance times completely.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="controls-panel">
+        <div class="tab-group" id="filterTabs">
+            <button class="filter-btn active" onclick="setFilter('all', this)">All Slots (150)</button>
+            <button class="filter-btn male" onclick="setFilter('male_optimum', this)">👔 Male Parents (Dads)</button>
+            <button class="filter-btn female" onclick="setFilter('female_optimum', this)">👗 Female Parents (Moms)</button>
+            <button class="filter-btn zero" onclick="setFilter('zero_conflict', this)">✨ Zero-Conflict Shifts</button>
+            <button class="filter-btn" onclick="setFilter('open_only', this)">🟢 Open Spots Only</button>
+            <button class="filter-btn excluded" onclick="setFilter('excluded', this)">⛔ Excluded Conflicts (57)</button>
+        </div>
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search role, date, level, notes..." oninput="handleSearch()">
+        </div>
+    </div>
+
+    <!-- Active Filter Notice -->
+    <div id="filterBanner" style="margin-bottom: 16px; font-size: 14px; color: var(--text-secondary);">
+        Showing: <strong id="activeFilterName" style="color: #fff;">All Volunteer Slots</strong> (<span id="visibleCount">150</span> slots)
+    </div>
+
+    <!-- Slots Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Role & Responsibilities</th>
+                    <th style="width: 18%;">Date, Time & Location</th>
+                    <th style="width: 12%;">Availability</th>
+                    <th style="width: 14%;">Suitability</th>
+                    <th style="width: 16%;">Show Conflict Level</th>
+                    <th style="width: 15%;">Strategic Rationale</th>
+                </tr>
+            </thead>
+            <tbody id="slotsTableBody">
+                <!-- Injected via JavaScript -->
+            </tbody>
+        </table>
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <h3>No matching volunteer slots found</h3>
+            <p>Try clearing your search term or switching to another filter tab.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const slotsData = [{"sid": "1855815556", "role_name": "Wardrobe", "comment": "(During studio hours) Help Wardrobe with costume prep, light sewing to minor alterations. These are simple sewing jobs with all supplies and instructions included (tasks include tacking on name tags, sewing buttons or hooks/eyes).", "date": "10/16/2026", "weekday": "Fri", "time": "12:00 AM - ", "location": "At home or Marin Ballet", "remaining": 2, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "zero_conflict", "conflict_rating": "Zero Conflict (Outside Show Dates)", "rationale": "Simple sewing/tagging in October or packing up on Dec 8. Gets volunteer credit done without touching performance weekend.", "tags": ["Male Friendly", "Female Friendly", "Zero Conflict", "Studio Prep"]}, {"sid": "1855815557", "role_name": "Wardrobe", "comment": "(During studio hours) Help Wardrobe with costume prep, light sewing to minor alterations. These are simple sewing jobs with all supplies and instructions included (tasks include tacking on name tags, sewing buttons or hooks/eyes).", "date": "10/17/2026", "weekday": "Sat", "time": "12:00 AM - ", "location": "At home or Marin Ballet", "remaining": 2, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "zero_conflict", "conflict_rating": "Zero Conflict (Outside Show Dates)", "rationale": "Simple sewing/tagging in October or packing up on Dec 8. Gets volunteer credit done without touching performance weekend.", "tags": ["Male Friendly", "Female Friendly", "Zero Conflict", "Studio Prep"]}, {"sid": "1855815559", "role_name": "Wardrobe", "comment": "(During studio hours) Help Wardrobe with costume prep, light sewing to minor alterations. These are simple sewing jobs with all supplies and instructions included (tasks include tacking on name tags, sewing buttons or hooks/eyes).", "date": "10/23/2026", "weekday": "Fri", "time": "12:00 AM - ", "location": "At home or Marin Ballet", "remaining": 2, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "zero_conflict", "conflict_rating": "Zero Conflict (Outside Show Dates)", "rationale": "Simple sewing/tagging in October or packing up on Dec 8. Gets volunteer credit done without touching performance weekend.", "tags": ["Male Friendly", "Female Friendly", "Zero Conflict", "Studio Prep"]}, {"sid": "1855815558", "role_name": "Wardrobe", "comment": "(During studio hours) Help Wardrobe with costume prep, light sewing to minor alterations. These are simple sewing jobs with all supplies and instructions included (tasks include tacking on name tags, sewing buttons or hooks/eyes).", "date": "10/24/2026", "weekday": "Sat", "time": "12:00 AM - ", "location": "At home or Marin Ballet", "remaining": 1, "taken": 1, "male_fit": "good", "female_fit": "good", "category": "zero_conflict", "conflict_rating": "Zero Conflict (Outside Show Dates)", "rationale": "Simple sewing/tagging in October or packing up on Dec 8. Gets volunteer credit done without touching performance weekend.", "tags": ["Male Friendly", "Female Friendly", "Zero Conflict", "Studio Prep"]}, {"sid": "1855815560", "role_name": "Set up for Monday Dress Rehearsal", "comment": "", "date": "11/21/2026", "weekday": "Sat", "time": "5:15pm - 5:45pm", "location": "Marin Ballet", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "no", "category": "other", "conflict_rating": "Varies", "rationale": "General production support.", "tags": ["Other"]}, {"sid": "1855815408", "role_name": "Dressing Room - Party Parents", "comment": "Please assist our female party parents with their costumes", "date": "11/23/2026", "weekday": "Mon", "time": "1:30pm - 3:00pm", "location": "Studio Dress - Act I", "remaining": 2, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815407", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/23/2026", "weekday": "Mon", "time": "2:00pm - 8:00pm", "location": "Studio Dress - Act I", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815409", "role_name": "Dressing Room - Party Kids (L7&8)", "comment": "Assit with costumes. Please note: If you are new to this role, it is mandatory to attend a tutorial at 5pm on Sat. Nov. 23rd", "date": "11/23/2026", "weekday": "Mon", "time": "2:30pm - 6:00pm", "location": "Studio Dress - Act I", "remaining": 3, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815410", "role_name": "Dressing Room - Mice", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/23/2026", "weekday": "Mon", "time": "3:00pm - 7:00pm", "location": "Studio Dress - Act I", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815411", "role_name": "Dressing Room - Soldiers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/23/2026", "weekday": "Mon", "time": "3:00pm - 7:00pm", "location": "Studio Dress - Act I", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815412", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/23/2026", "weekday": "Mon", "time": "3:00pm - 7:00pm", "location": "Studio Dress - Act I", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815413", "role_name": "Prop Volunteers", "comment": "Assist with props backstage - Newbies welcome! You must sign up for a rehearsal at both MB and theater, plus a show.", "date": "11/23/2026", "weekday": "Mon", "time": "3:30pm - 8:00pm", "location": "Studio Dress - Act I", "remaining": 0, "taken": 2, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815414", "role_name": "Dressing Room - Level 9 (snow)", "comment": "assist level 9 with snow costume and help the stage left dressing room manager", "date": "11/23/2026", "weekday": "Mon", "time": "5:00pm - 8:00pm", "location": "Studio Dress - Act I", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815415", "role_name": "Dressing Room - Sweet Tooth & Gingerbread", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "11:00am - 4:00pm", "location": "Studio Dress - Act II", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815417", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "11:30am - 5:45pm", "location": "Studio Dress - Act II", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1863004415", "role_name": "Dressing Room - Level 7", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "11:30am - 5:45pm", "location": "Studio Dress - Act II", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815418", "role_name": "Dressing Room - Levels 8-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "11:30am - 5:45pm", "location": "Studio Dress - Act II", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815419", "role_name": "Dressing Room - Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "11:30am - 5:45pm", "location": "Studio Dress - Act II", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815561", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "11:30am - 6:30pm", "location": "Studio Dress - Act II", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815420", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "12:30pm - 3:30pm", "location": "Studio Dress - Act II", "remaining": 0, "taken": 2, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815416", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "11/24/2026", "weekday": "Tue", "time": "12:30pm - 4:00pm", "location": "Studio Dress - Act II", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815424", "role_name": "Prop Volunteer", "comment": "Assist with props backstage - Newbies welcome! You must sign up for a rehearsal at both MB and theater, plus a show.", "date": "11/24/2026", "weekday": "Tue", "time": "12:30pm - 5:30pm", "location": "Studio Dress - Act II", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815422", "role_name": "Dressing Room - Mother Ginger", "comment": "This role requires one rehearsal and one show. Theater dress and during the shows you will be assisting Mother Ginger and the female party parents.", "date": "11/24/2026", "weekday": "Tue", "time": "2:15pm - 4:15pm", "location": "Studio Dress - Act II", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815436", "role_name": "Security - Lobby Hallway", "comment": "All cast will be signing in at this post for both rehearsals", "date": "12/03/2026", "weekday": "Thu", "time": "2:30pm - 5:45pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815568", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/03/2026", "weekday": "Thu", "time": "2:30pm - 7:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815444", "role_name": "Drop-off Coordinator", "comment": "Direct parents and student to proper check-in location", "date": "12/03/2026", "weekday": "Thu", "time": "2:45pm - 5:30pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "rehearsal_support", "conflict_rating": "None (Pre-Rehearsal Check-In)", "rationale": "Stationed at check-in during tech dress rehearsals. Greet your dancer, help them settle in, and finish before the evening run starts.", "tags": ["Male Friendly", "Female Friendly", "Rehearsal Pre-Show", "Performer Support"]}, {"sid": "1855815427", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/03/2026", "weekday": "Thu", "time": "3:00pm - 6:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815426", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/03/2026", "weekday": "Thu", "time": "3:00pm - 6:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815425", "role_name": "Supervisor & Runner - Mice & Soldiers", "comment": "supervise mice & soliders in the main lobby, take them to on stage spacing and from there to the cafeteria. This role is not a dressing room position.", "date": "12/03/2026", "weekday": "Thu", "time": "3:00pm - 6:30pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "good", "female_fit": "top", "category": "rehearsal_support", "conflict_rating": "Rehearsal Only (Not a Dressing Room Role)", "rationale": "Supervise young dancers (Mice, Soldiers, Fairies) between lobby, stage, and cafeteria during dress rehearsals. Hands-on reassurance.", "tags": ["Male Friendly", "Female Optimal", "Rehearsal Only", "Performer Support"]}, {"sid": "1855815447", "role_name": "Backstage Coordinator - Level 2-6", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/03/2026", "weekday": "Thu", "time": "3:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815448", "role_name": "Backstage Coordinator - Level 7-9", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/03/2026", "weekday": "Thu", "time": "3:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815432", "role_name": "Security - Cafeteria", "comment": "Ensuring that only MB Staff and volunteers are permitted in and out of the cafeteria.", "date": "12/03/2026", "weekday": "Thu", "time": "4:00pm - 7:00pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815445", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "4:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815428", "role_name": "Supervisor & Runner - Sweet Tooth Fairies", "comment": "supervise sweet tooth fairies in the main lobby, take them to on stage spacing and from there to the cafeteria. This role is not a dressing room position.", "date": "12/03/2026", "weekday": "Thu", "time": "4:15pm - 6:30pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "good", "female_fit": "top", "category": "rehearsal_support", "conflict_rating": "Rehearsal Only (Not a Dressing Room Role)", "rationale": "Supervise young dancers (Mice, Soldiers, Fairies) between lobby, stage, and cafeteria during dress rehearsals. Hands-on reassurance.", "tags": ["Male Friendly", "Female Optimal", "Rehearsal Only", "Performer Support"]}, {"sid": "1855815440", "role_name": "Dressing Room - Gingerbread & Sweet Tooth", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "5:30pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 2, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815439", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "5:30pm - 9:30pm", "location": "Theater Dress", "remaining": 2, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815438", "role_name": "Dressing Room - Mice, Soldiers & Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "6:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815446", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "6:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815563", "role_name": "Egg Hair Braiders", "comment": "", "date": "12/03/2026", "weekday": "Thu", "time": "6:15pm - 7:45pm", "location": "Theater Dress", "remaining": 4, "taken": 0, "male_fit": "neutral", "female_fit": "top", "category": "rehearsal_support", "conflict_rating": "Rehearsal Prep Only", "rationale": "Help braid dancers hair backstage before Thursday tech rehearsal. Hands-on prep for dancers.", "tags": ["Female Optimal", "Rehearsal Only", "Hair Styling"]}, {"sid": "1855815429", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "6:30pm - 9:30pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815431", "role_name": "Dressing Room - Levels 7-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/03/2026", "weekday": "Thu", "time": "6:30pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815441", "role_name": "Dressing Room - Party Parents & Mother Ginger", "comment": "This role requires 1 rehearsal and 1 show. Please assist our female party parents and mother ginger with their costumes", "date": "12/03/2026", "weekday": "Thu", "time": "6:30pm - 9:30pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815443", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/03/2026", "weekday": "Thu", "time": "7:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815442", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/03/2026", "weekday": "Thu", "time": "7:00pm - 9:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815433", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/03/2026", "weekday": "Thu", "time": "7:00pm - 9:45pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815435", "role_name": "Security - Cafeteria", "comment": "Sign-out station for levels 2-6 ONLY", "date": "12/03/2026", "weekday": "Thu", "time": "7:00pm - 9:45pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815434", "role_name": "Security - Lobby Hallway", "comment": "Sign-out post for levels 7-9 ONLY", "date": "12/03/2026", "weekday": "Thu", "time": "7:00pm - 9:45pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815449", "role_name": "Security - Lobby Hallway", "comment": "All cast will be signing in at this post for both rehearsals", "date": "12/04/2026", "weekday": "Fri", "time": "2:00pm - 5:15pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815450", "role_name": "Drop-off Coordinator", "comment": "Direct parents and student to proper check-in location", "date": "12/04/2026", "weekday": "Fri", "time": "2:15pm - 4:45pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "rehearsal_support", "conflict_rating": "None (Pre-Rehearsal Check-In)", "rationale": "Stationed at check-in during tech dress rehearsals. Greet your dancer, help them settle in, and finish before the evening run starts.", "tags": ["Male Friendly", "Female Friendly", "Rehearsal Pre-Show", "Performer Support"]}, {"sid": "1855815466", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/04/2026", "weekday": "Fri", "time": "2:30pm - 6:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815465", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/04/2026", "weekday": "Fri", "time": "2:30pm - 6:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815451", "role_name": "Supervisor & Runner - Mice & Soldiers", "comment": "supervise mice & soliders in the main lobby, take them to on stage spacing and from there to the cafeteria. This role is not a dressing room position.", "date": "12/04/2026", "weekday": "Fri", "time": "2:30pm - 6:00pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "good", "female_fit": "top", "category": "rehearsal_support", "conflict_rating": "Rehearsal Only (Not a Dressing Room Role)", "rationale": "Supervise young dancers (Mice, Soldiers, Fairies) between lobby, stage, and cafeteria during dress rehearsals. Hands-on reassurance.", "tags": ["Male Friendly", "Female Optimal", "Rehearsal Only", "Performer Support"]}, {"sid": "1855815452", "role_name": "Security - Cafeteria", "comment": "Ensuring that only MB Staff and volunteers are permitted in the cafeteria.", "date": "12/04/2026", "weekday": "Fri", "time": "3:00pm - 6:30pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815471", "role_name": "Backstage Coordinator - Level 2-6", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/04/2026", "weekday": "Fri", "time": "3:00pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815472", "role_name": "Backstage Coordinator - Level 7-9", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/04/2026", "weekday": "Fri", "time": "3:00pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815453", "role_name": "Supervisor & Runner - Sweet Tooth Fairies", "comment": "supervise sweet tooth fairies in the main lobby, take them to on stage spacing and from there to the cafeteria. This role is not a dressing room position.", "date": "12/04/2026", "weekday": "Fri", "time": "3:15pm - 6:00pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "good", "female_fit": "top", "category": "rehearsal_support", "conflict_rating": "Rehearsal Only (Not a Dressing Room Role)", "rationale": "Supervise young dancers (Mice, Soldiers, Fairies) between lobby, stage, and cafeteria during dress rehearsals. Hands-on reassurance.", "tags": ["Male Friendly", "Female Optimal", "Rehearsal Only", "Performer Support"]}, {"sid": "1855815470", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "4:00pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815455", "role_name": "Dressing Room - Gingerbread & Sweet Tooth", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "5:00pm - 9:00pm", "location": "Theater Dress", "remaining": 2, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815454", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "5:00pm - 9:00pm", "location": "Theater Dress", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815457", "role_name": "Dressing Room - Mice, Soldiers & Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "5:30pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815469", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "5:30pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815570", "role_name": "Ticket Scanner", "comment": "", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 7:00pm", "location": "Theater Dress", "remaining": 1, "taken": 1, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Ends at Curtain)", "rationale": "Shift ends right as performance begins (1:15pm or 5:15pm). Scan tickets, then take your seat and watch the entire show without missing a single moment.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815569", "role_name": "Boutique Sales", "comment": "Assist with Nutcracker Boutique sales and items. You may volunteer if you attend the performance, but must be in the lobby to help before and after the performance, and during intermission.", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:00pm", "location": "Theater Dress", "remaining": 2, "taken": 0, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Official Note: May Watch Show)", "rationale": "Official SignUpGenius permission: You may attend the performance! You work sales before the show, during intermission, and briefly post-show.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815458", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:00pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815460", "role_name": "Dressing Room - Levels 7-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815461", "role_name": "Dressing Room - Party Parents & Mother Ginger", "comment": "This role requires 1 rehearsal and 1 show. Please assist our female party parents and mother ginger with their costumes", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:00pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815473", "role_name": "Parent Ushers", "comment": "You will direct patrons to their seats and be responsible for the customer service of the audience before, during and after a performance. Assist cleaning the theater after the show. Option to stand and watch at the back of the theater.", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:00pm", "location": "Theater Dress", "remaining": 1, "taken": 2, "male_fit": "good", "female_fit": "good", "category": "front_of_house", "conflict_rating": "Low (Option to Watch from Back of Theater)", "rationale": "Direct patrons to seats before curtain, then stand and watch the show from the back of the auditorium without buying a ticket.", "tags": ["Male Friendly", "Female Friendly", "Watch Show (Standing)", "Auditorium"]}, {"sid": "1855815462", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:15pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815464", "role_name": "Security - Cafeteria", "comment": "Sign-out station for Level 2-6 only", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:15pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815463", "role_name": "Security - Lobby Hallway", "comment": "Sign-out post for levels 7-9 ONLY", "date": "12/04/2026", "weekday": "Fri", "time": "6:00pm - 9:15pm", "location": "Theater Dress", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815468", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/04/2026", "weekday": "Fri", "time": "6:30pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815467", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/04/2026", "weekday": "Fri", "time": "6:30pm - 9:00pm", "location": "Theater Dress", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815474", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/05/2026", "weekday": "Sat", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815503", "role_name": "Dressing Room - Levels 7-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815475", "role_name": "Security - Cafeteria", "comment": "Sign-in and sign-out station for levels 2-6 ONLY", "date": "12/05/2026", "weekday": "Sat", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815476", "role_name": "Security - Lobby Hallway", "comment": "Sign-in and sign-out station for levels 7-9 ONLY", "date": "12/05/2026", "weekday": "Sat", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815495", "role_name": "Ticket Scanner", "comment": "", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 1:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 3, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Ends at Curtain)", "rationale": "Shift ends right as performance begins (1:15pm or 5:15pm). Scan tickets, then take your seat and watch the entire show without missing a single moment.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815497", "role_name": "Boutique Sales", "comment": "Assist with Nutcracker Boutique sales and items.", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 1, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Official Note: May Watch Show)", "rationale": "Official SignUpGenius permission: You may attend the performance! You work sales before the show, during intermission, and briefly post-show.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815485", "role_name": "Dressing Room - Mice, Soldiers & Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815484", "role_name": "Dressing Room - Party Parents & Mother Ginger", "comment": "This role requires 1 rehearsal and 1 show. Please assist our female party parents and mother ginger with their costumes", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815482", "role_name": "Backstage Coordinator - Level 2-6", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815483", "role_name": "Backstage Coordinator - Level 7-9", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815481", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815480", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815552", "role_name": "Parent Ushers", "comment": "You will direct patrons to their seats and be responsible for the customer service of the audience before, during and after a performance. Assist cleaning the theater after the show. Option to stand and watch at the back of the theater.", "date": "12/05/2026", "weekday": "Sat", "time": "12:15pm - 3:00pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 2, "male_fit": "good", "female_fit": "good", "category": "front_of_house", "conflict_rating": "Low (Option to Watch from Back of Theater)", "rationale": "Direct patrons to seats before curtain, then stand and watch the show from the back of the auditorium without buying a ticket.", "tags": ["Male Friendly", "Female Friendly", "Watch Show (Standing)", "Auditorium"]}, {"sid": "1855815489", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815488", "role_name": "Dressing Room - Gingerbread & Sweet Tooth", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815487", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 2, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815492", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/05/2026", "weekday": "Sat", "time": "12:30pm - 3:00pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815491", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/05/2026", "weekday": "Sat", "time": "12:30pm - 3:00pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815564", "role_name": "Beverage Sales", "comment": "Assist with the sale of beverages (enter through lobby after performances begin)", "date": "12/05/2026", "weekday": "Sat", "time": "1:15pm - 2:30pm", "location": "Theater - Performance Day", "remaining": 4, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "Moderate Conflict (Intermission & Show Overlap)", "rationale": "Shift runs 1:15pm-2:30pm or 5:15pm-6:30pm, overlapping intermission and the middle of the performance.", "tags": ["Excluded", "Concessions Conflict"]}, {"sid": "1855815477", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/05/2026", "weekday": "Sat", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815504", "role_name": "Dressing Room - Levels 7-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815478", "role_name": "Security - Cafeteria", "comment": "Sign-in and sign-out station for levels 2-6 ONLY", "date": "12/05/2026", "weekday": "Sat", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815479", "role_name": "Security - Lobby Hallway", "comment": "Sign-in and sign-out station for levels 7-9 ONLY", "date": "12/05/2026", "weekday": "Sat", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815496", "role_name": "Ticket Scanner", "comment": "", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 5:15pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 1, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Ends at Curtain)", "rationale": "Shift ends right as performance begins (1:15pm or 5:15pm). Scan tickets, then take your seat and watch the entire show without missing a single moment.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815509", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815508", "role_name": "Dressing Room - Gingerbread & Sweet Tooth", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815506", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815507", "role_name": "Dressing Room - Mice, Soldiers & Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 2, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815511", "role_name": "Dressing Room - Party Parents & Mother Ginger", "comment": "This role requires 1 rehearsal and 1 show. Please assist our female party parents and mother ginger with their costumes", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815501", "role_name": "Backstage Coordinator - Level 2-6", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815502", "role_name": "Backstage Coordinator - Level 7-9", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815500", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815499", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/05/2026", "weekday": "Sat", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815553", "role_name": "Parent Ushers", "comment": "You will direct patrons to their seats and be responsible for the customer service of the audience before, during and after a performance. Assist cleaning the theater after the show. Option to stand and watch at the back of the theater.", "date": "12/05/2026", "weekday": "Sat", "time": "4:15pm - 7:00pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 1, "male_fit": "good", "female_fit": "good", "category": "front_of_house", "conflict_rating": "Low (Option to Watch from Back of Theater)", "rationale": "Direct patrons to seats before curtain, then stand and watch the show from the back of the auditorium without buying a ticket.", "tags": ["Male Friendly", "Female Friendly", "Watch Show (Standing)", "Auditorium"]}, {"sid": "1855815498", "role_name": "Boutique Sales", "comment": "Assist with Nutcracker Boutique sales and items.", "date": "12/05/2026", "weekday": "Sat", "time": "4:15pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 3, "taken": 0, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Official Note: May Watch Show)", "rationale": "Official SignUpGenius permission: You may attend the performance! You work sales before the show, during intermission, and briefly post-show.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815494", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/05/2026", "weekday": "Sat", "time": "4:30pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815493", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/05/2026", "weekday": "Sat", "time": "4:30pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815565", "role_name": "Beverage Sales", "comment": "Assist with the sale of beverages (enter through lobby after performances begin)", "date": "12/05/2026", "weekday": "Sat", "time": "5:15pm - 6:30pm", "location": "Theater - Performance Day", "remaining": 4, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "Moderate Conflict (Intermission & Show Overlap)", "rationale": "Shift runs 1:15pm-2:30pm or 5:15pm-6:30pm, overlapping intermission and the middle of the performance.", "tags": ["Excluded", "Concessions Conflict"]}, {"sid": "1855815521", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/06/2026", "weekday": "Sun", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815520", "role_name": "Dressing Room - Levels 7-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 2, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815522", "role_name": "Security - Cafeteria", "comment": "Sign-in and sign-out station for levels 2-6 ONLY", "date": "12/06/2026", "weekday": "Sun", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815523", "role_name": "Security - Lobby Hallway", "comment": "Sign-in and sign-out station for levels 7-9 ONLY", "date": "12/06/2026", "weekday": "Sun", "time": "11:45am - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815549", "role_name": "Ticket Scanner", "comment": "", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 1:15pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 1, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Ends at Curtain)", "rationale": "Shift ends right as performance begins (1:15pm or 5:15pm). Scan tickets, then take your seat and watch the entire show without missing a single moment.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815531", "role_name": "Dressing Room - Mice, Soldiers & Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815529", "role_name": "Dressing Room - Party Parents & Mother Ginger", "comment": "This role requires 1 rehearsal and 1 show. Please assist our female party parents and mother ginger with their costumes", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815514", "role_name": "Backstage Coordinator - Level 2-6", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815515", "role_name": "Backstage Coordinator - Level 7-9", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815513", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815512", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "12:00pm - 3:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815554", "role_name": "Parent Ushers", "comment": "You will direct patrons to their seats and be responsible for the customer service of the audience before, during and after a performance. Assist cleaning the theater after the show. Option to stand and watch at the back of the theater.", "date": "12/06/2026", "weekday": "Sun", "time": "12:15pm - 3:00pm", "location": "Theater - Performance Day", "remaining": 3, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "front_of_house", "conflict_rating": "Low (Option to Watch from Back of Theater)", "rationale": "Direct patrons to seats before curtain, then stand and watch the show from the back of the auditorium without buying a ticket.", "tags": ["Male Friendly", "Female Friendly", "Watch Show (Standing)", "Auditorium"]}, {"sid": "1855815547", "role_name": "Boutique Sales", "comment": "Assist with Nutcracker Boutique sales and items.", "date": "12/06/2026", "weekday": "Sun", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 2, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Official Note: May Watch Show)", "rationale": "Official SignUpGenius permission: You may attend the performance! You work sales before the show, during intermission, and briefly post-show.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815536", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815535", "role_name": "Dressing Room - Gingerbread & Sweet Tooth", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815534", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "12:15pm - 3:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815544", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/06/2026", "weekday": "Sun", "time": "12:30pm - 3:00pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815543", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/06/2026", "weekday": "Sun", "time": "12:30pm - 3:00pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815566", "role_name": "Beverage Sales", "comment": "Assist with the sale of beverages (enter through lobby after performances begin)", "date": "12/06/2026", "weekday": "Sun", "time": "1:15pm - 2:30pm", "location": "Theater - Performance Day", "remaining": 4, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "Moderate Conflict (Intermission & Show Overlap)", "rationale": "Shift runs 1:15pm-2:30pm or 5:15pm-6:30pm, overlapping intermission and the middle of the performance.", "tags": ["Excluded", "Concessions Conflict"]}, {"sid": "1855815526", "role_name": "Bouncer - Backstage Door", "comment": "Patrol the backstage door ensuring that only faculty, staff, and volunteers are permitted. Assist volunteers with signing in; find their name on the sign-in sheet, retrieve their name tag, etc. Both will be prepared before your shift.", "date": "12/06/2026", "weekday": "Sun", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815525", "role_name": "Dressing Room - Levels 7-9", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 2, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815527", "role_name": "Security - Cafeteria", "comment": "Sign-in and sign-out station for levels 2-6 ONLY", "date": "12/06/2026", "weekday": "Sun", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815528", "role_name": "Security - Lobby Hallway", "comment": "Sign-in and sign-out station for levels 7-9 ONLY", "date": "12/06/2026", "weekday": "Sun", "time": "3:30pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Stationed Away from Stage)", "rationale": "Excluded per your preference: Stationed at exterior doors, hallways, or cafeteria during showtime. Cannot watch dancer perform.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815550", "role_name": "Ticket Scanner", "comment": "", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 5:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 3, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Ends at Curtain)", "rationale": "Shift ends right as performance begins (1:15pm or 5:15pm). Scan tickets, then take your seat and watch the entire show without missing a single moment.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815541", "role_name": "Dressing Room - Chinese Almonds", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815540", "role_name": "Dressing Room - Gingerbread & Sweet Tooth", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815539", "role_name": "Dressing Room - Golden Eggs", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815532", "role_name": "Dressing Room - Mice, Soldiers & Russian Bakers", "comment": "For this role, it is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 3, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815530", "role_name": "Dressing Room - Party Parents & Mother Ginger", "comment": "This role requires 1 rehearsal and 1 show. Please assist our female party parents and mother ginger with their costumes", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815518", "role_name": "Backstage Coordinator - Level 2-6", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815519", "role_name": "Backstage Coordinator - Level 7-9", "comment": "Oversees all dressing rooms and coordinates the performances", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "neutral", "category": "excluded_conflict", "conflict_rating": "High Conflict (Full Show Coordination)", "rationale": "High responsibility coordinating dressing rooms and stage flow; entirely backstage.", "tags": ["Excluded", "Backstage Coordination"]}, {"sid": "1855815517", "role_name": "Level 2-6 Dressing Room Manager", "comment": "Oversee and assist all roles with dancers in levels 2-6. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815516", "role_name": "Level 7-9 Dressing Room Manager", "comment": "Oversee and assist all roles with students in levels 7 to 9. It is required that you attend at least 1 rehearsal and 1 performance.", "date": "12/06/2026", "weekday": "Sun", "time": "4:00pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 1, "taken": 0, "male_fit": "no", "female_fit": "top", "category": "dressing_room", "conflict_rating": "Backstage with Dancer (Cannot Watch Auditorium)", "rationale": "Off-limits for male volunteers due to privacy. Top pick for female parents wanting to support their dancer with costume changes and pre-stage nerves.", "tags": ["Female Only", "Backstage Direct Support", "Costume & Jitters"]}, {"sid": "1855815555", "role_name": "Parent Ushers", "comment": "You will direct patrons to their seats and be responsible for the customer service of the audience before, during and after a performance. Assist cleaning the theater after the show. Option to stand and watch at the back of the theater.", "date": "12/06/2026", "weekday": "Sun", "time": "4:15pm - 7:00pm", "location": "Theater - Performance Day", "remaining": 2, "taken": 1, "male_fit": "good", "female_fit": "good", "category": "front_of_house", "conflict_rating": "Low (Option to Watch from Back of Theater)", "rationale": "Direct patrons to seats before curtain, then stand and watch the show from the back of the auditorium without buying a ticket.", "tags": ["Male Friendly", "Female Friendly", "Watch Show (Standing)", "Auditorium"]}, {"sid": "1855815548", "role_name": "Boutique Sales", "comment": "Assist with Nutcracker Boutique sales and items.", "date": "12/06/2026", "weekday": "Sun", "time": "4:15pm - 7:15pm", "location": "Theater - Performance Day", "remaining": 3, "taken": 0, "male_fit": "top", "female_fit": "top", "category": "front_of_house", "conflict_rating": "None (Official Note: May Watch Show)", "rationale": "Official SignUpGenius permission: You may attend the performance! You work sales before the show, during intermission, and briefly post-show.", "tags": ["Male Optimal", "Female Optimal", "Watch Show", "Front of House"]}, {"sid": "1855815546", "role_name": "Props - Stage Left", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/06/2026", "weekday": "Sun", "time": "4:30pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815545", "role_name": "Props - Stage Right", "comment": "Full performance and requirement of a minimum of 1 rehearsal and 1 performance", "date": "12/06/2026", "weekday": "Sun", "time": "4:30pm - 7:30pm", "location": "Theater - Performance Day", "remaining": 0, "taken": 1, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "High Conflict (Backstage Entire Show)", "rationale": "Excluded per your preference: Requires working props backstage through entire performance; cannot watch from the auditorium.", "tags": ["Excluded", "Performance Conflict"]}, {"sid": "1855815567", "role_name": "Beverage Sales", "comment": "Assist with the sale of beverages (enter through lobby after performances begin)", "date": "12/06/2026", "weekday": "Sun", "time": "5:15pm - 6:30pm", "location": "Theater - Performance Day", "remaining": 4, "taken": 0, "male_fit": "no", "female_fit": "no", "category": "excluded_conflict", "conflict_rating": "Moderate Conflict (Intermission & Show Overlap)", "rationale": "Shift runs 1:15pm-2:30pm or 5:15pm-6:30pm, overlapping intermission and the middle of the performance.", "tags": ["Excluded", "Concessions Conflict"]}, {"sid": "1855815551", "role_name": "Clean Up Crew", "comment": "Many hands make light work! Help us close out the production by assisting with the takedown of decorations. Volunteers are guaranteed a minimum of 2 volunteer hours for their help.", "date": "12/06/2026", "weekday": "Sun", "time": "7:00pm - 8:30pm", "location": "Theater - Performance Day", "remaining": 6, "taken": 0, "male_fit": "top", "female_fit": "top", "category": "zero_conflict", "conflict_rating": "Zero Conflict (After All Shows)", "rationale": "Sunday 7:00pm\u20138:30pm after all 4 shows wrap up! You enjoy the entire weekend with your dancer, then return for 90 mins of breakdown (counts as 2 hrs).", "tags": ["Male Optimal", "Female Optimal", "Zero Conflict", "Post-Show Strike"]}, {"sid": "1855815562", "role_name": "Wardrobe", "comment": "Help Unpack and Packup Wardrobe", "date": "12/08/2026", "weekday": "Tue", "time": "4:30pm - 6:30pm", "location": "Marin Ballet", "remaining": 4, "taken": 0, "male_fit": "good", "female_fit": "good", "category": "zero_conflict", "conflict_rating": "Zero Conflict (Outside Show Dates)", "rationale": "Simple sewing/tagging in October or packing up on Dec 8. Gets volunteer credit done without touching performance weekend.", "tags": ["Male Friendly", "Female Friendly", "Zero Conflict", "Studio Prep"]}];
+let currentFilter = 'all';
+let searchQuery = '';
+
+function renderSlots() {
+    const tbody = document.getElementById('slotsTableBody');
+    const emptyState = document.getElementById('emptyState');
+    tbody.innerHTML = '';
+
+    const filtered = slotsData.filter(item => {
+        // Filter tabs
+        if (currentFilter === 'male_optimum') {
+            if (item.male_fit !== 'top' && item.male_fit !== 'good') return false;
+        } else if (currentFilter === 'female_optimum') {
+            if (item.female_fit !== 'top' && item.female_fit !== 'good') return false;
+        } else if (currentFilter === 'zero_conflict') {
+            if (item.category !== 'zero_conflict' && !item.conflict_rating.includes('Zero Conflict')) return false;
+        } else if (currentFilter === 'open_only') {
+            if (item.remaining <= 0) return false;
+        } else if (currentFilter === 'excluded') {
+            if (item.category !== 'excluded_conflict' && item.male_fit !== 'no' && item.female_fit !== 'no') return false;
+        }
+
+        // Search text
+        if (searchQuery) {
+            const q = searchQuery.toLowerCase();
+            const text = (item.role_name + ' ' + item.comment + ' ' + item.date + ' ' + item.weekday + ' ' + item.time + ' ' + item.location + ' ' + item.rationale).toLowerCase();
+            if (!text.includes(q)) return false;
+        }
+
+        return true;
+    });
+
+    document.getElementById('visibleCount').textContent = filtered.length;
+
+    if (filtered.length === 0) {
+        emptyState.style.display = 'block';
+        return;
+    } else {
+        emptyState.style.display = 'none';
+    }
+
+    filtered.forEach(item => {
+        const tr = document.createElement('tr');
+
+        // Availability badge
+        const availBadge = item.remaining > 0 
+            ? `<span class="badge badge-open">🟢 ${item.remaining} Open</span>`
+            : `<span class="badge badge-full">🔒 Full (${item.taken} filled)</span>`;
+
+        // Suitability Badges
+        let fitBadges = '';
+        if (item.male_fit === 'top') {
+            fitBadges += '<span class="badge badge-top" title="Top Pick for Dads">👔 Dad Top Pick</span> ';
+        } else if (item.male_fit === 'good') {
+            fitBadges += '<span class="badge" style="background:rgba(56,189,248,0.1); color:#38bdf8;">👔 Dad Friendly</span> ';
+        } else if (item.male_fit === 'no') {
+            fitBadges += '<span class="badge" style="background:rgba(239,68,68,0.1); color:#fca5a5;">❌ Dad Off-Limits</span> ';
+        }
+
+        if (item.female_fit === 'top') {
+            fitBadges += '<span class="badge badge-female" title="Top Pick for Moms">👗 Mom Top Pick</span> ';
+        } else if (item.female_fit === 'good') {
+            fitBadges += '<span class="badge" style="background:rgba(244,63,94,0.1); color:#f472b6;">👗 Mom Friendly</span> ';
+        }
+
+        // Conflict badge
+        let conflictClass = 'badge-conflict-none';
+        if (item.conflict_rating.includes('High')) {
+            conflictClass = 'badge-conflict-high';
+        } else if (item.conflict_rating.includes('Moderate') || item.conflict_rating.includes('Low')) {
+            conflictClass = 'badge-conflict-mod';
+        }
+        const conflictBadge = `<span class="badge ${conflictClass}">${item.conflict_rating}</span>`;
+
+        tr.innerHTML = `
+            <td>
+                <div class="role-name">${item.role_name}</div>
+                <div class="role-comment">${item.comment || 'General volunteer support.'}</div>
+            </td>
+            <td>
+                <div class="date-time">${item.date} (${item.weekday})</div>
+                <div class="date-badge">⏰ ${item.time}</div>
+                <div style="margin-top:4px;"><span class="location-badge">📍 ${item.location}</span></div>
+            </td>
+            <td>
+                ${availBadge}
+                <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">Total Needed: ${item.remaining + item.taken}</div>
+            </td>
+            <td>${fitBadges}</td>
+            <td>${conflictBadge}</td>
+            <td><div class="rationale-text">${item.rationale}</div></td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function setFilter(filterType, btn) {
+    currentFilter = filterType;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const names = {
+        'all': 'All Volunteer Slots',
+        'male_optimum': 'Optimum for Male Parents (Dads - Zero Dressing Room & Zero Performance Conflict)',
+        'female_optimum': 'Optimum for Female Parents (Moms - Backstage Care & Show-Friendly)',
+        'zero_conflict': 'Zero-Conflict Slots (Pre-Production, Rehearsals, and Post-Show Strike)',
+        'open_only': 'Currently Open Slots Ready for Sign Up',
+        'excluded': 'Excluded Roles (Props, Security, Beverage Conflicts)'
+    };
+    document.getElementById('activeFilterName').textContent = names[filterType] || filterType;
+    renderSlots();
+}
+
+function handleSearch() {
+    searchQuery = document.getElementById('searchInput').value;
+    renderSlots();
+}
+
+// Initial render
+renderSlots();
+</script>
+
+</body>
+</html>
