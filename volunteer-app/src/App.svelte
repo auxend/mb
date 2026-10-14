@@ -22,6 +22,12 @@
   let dancerCast = $state('none');    // 'none' | 'cast_a' | 'cast_b' | 'sat_mat' | 'sat_eve' | 'sun_mat' | 'sun_eve'
   let searchQuery = $state('');
   let roleTypeFilter = $state('all'); // 'all' | 'tickets' | 'boutique' | 'usher' | 'cleanup' | 'dressing'
+  let currentPreset = $state('dad_optimal');
+  let presetScrollContainer = $state(null);
+  let isDragging = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let hasDragged = false;
 
   onMount(() => {
     isStandaloneFileMode = window.location.protocol === 'file:';
@@ -81,6 +87,7 @@
 
   // Quick Presets
   function applyPreset(name) {
+    currentPreset = name;
     if (name === 'dad_optimal') {
       parentPersona = 'dad';
       canSew = false;
@@ -130,6 +137,54 @@
       searchQuery = '';
       roleTypeFilter = 'all';
     }
+  }
+
+  function handlePresetWheel(e) {
+    if (!presetScrollContainer) return;
+    if (Math.abs(e.deltaY) > 0) {
+      e.preventDefault();
+      presetScrollContainer.scrollLeft += e.deltaY * 1.2;
+    }
+  }
+
+  function scrollPresets(direction) {
+    if (!presetScrollContainer) return;
+    const scrollAmount = 260;
+    presetScrollContainer.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  function handleDragStart(e) {
+    if (!presetScrollContainer) return;
+    isDragging = true;
+    hasDragged = false;
+    startX = e.pageX - presetScrollContainer.offsetLeft;
+    scrollLeft = presetScrollContainer.scrollLeft;
+  }
+
+  function handleDragMove(e) {
+    if (!isDragging || !presetScrollContainer) return;
+    const x = e.pageX - presetScrollContainer.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    if (Math.abs(walk) > 4) {
+      hasDragged = true;
+      e.preventDefault();
+      presetScrollContainer.scrollLeft = scrollLeft - walk;
+    }
+  }
+
+  function handleDragEnd() {
+    isDragging = false;
+  }
+
+  function handleChipClick(name) {
+    if (hasDragged) {
+      hasDragged = false;
+      return;
+    }
+    applyPreset(name);
   }
 
   // Check show conflict with dancer schedule
@@ -300,27 +355,77 @@
     </div>
   {/if}
 
-  <!-- Quick Presets Bar (Mobile Horizontal Swipe) -->
+  <!-- Quick Presets Bar (With Smooth Scroll, Arrows & Wheel Support) -->
   <section class="presets-section">
     <div class="preset-label">⚡ Fast Presets:</div>
-    <div class="preset-buttons">
-      <button class="preset-chip active" onclick={() => applyPreset('dad_optimal')}>
-        🎯 Non-Sewing Dad (≤3.5h)
+    <div class="presets-carousel-wrap">
+      <button 
+        type="button" 
+        class="carousel-arrow arrow-left" 
+        onclick={() => scrollPresets('left')} 
+        aria-label="Scroll presets left"
+      >
+        ‹
       </button>
-      <button class="preset-chip" onclick={() => applyPreset('quick_shifts')}>
-        ⚡ Quick Shifts (≤ 1.5h)
-      </button>
-      <button class="preset-chip" onclick={() => applyPreset('zero_stress')}>
-        🧹 Clean Up Crew (1.5h)
-      </button>
-      <button class="preset-chip" onclick={() => applyPreset('tickets_only')}>
-        🎟️ Ticket Scanner (1.25h)
-      </button>
-      <button class="preset-chip" onclick={() => applyPreset('mom_backstage')}>
-        👗 Mom Backstage Care
-      </button>
-      <button class="preset-chip reset" onclick={() => applyPreset('reset')}>
-        🔄 Show All ({slots.length})
+
+      <!-- svelte-ignore a11y_no_noninteractive_element_interactions, a11y_no_noninteractive_tabindex -->
+      <div 
+        class="preset-buttons-scroll"
+        role="region"
+        aria-label="Preset filters list"
+        tabindex="0"
+        bind:this={presetScrollContainer}
+        onwheel={handlePresetWheel}
+        onmousedown={handleDragStart}
+        onmousemove={handleDragMove}
+        onmouseup={handleDragEnd}
+        onmouseleave={handleDragEnd}
+      >
+        <button 
+          class="preset-chip {currentPreset === 'dad_optimal' ? 'active' : ''}" 
+          onclick={() => handleChipClick('dad_optimal')}
+        >
+          🎯 Non-Sewing Dad (≤3.5h)
+        </button>
+        <button 
+          class="preset-chip {currentPreset === 'quick_shifts' ? 'active' : ''}" 
+          onclick={() => handleChipClick('quick_shifts')}
+        >
+          ⚡ Quick Shifts (≤ 1.5h)
+        </button>
+        <button 
+          class="preset-chip {currentPreset === 'zero_stress' ? 'active' : ''}" 
+          onclick={() => handleChipClick('zero_stress')}
+        >
+          🧹 Clean Up Crew (1.5h)
+        </button>
+        <button 
+          class="preset-chip {currentPreset === 'tickets_only' ? 'active' : ''}" 
+          onclick={() => handleChipClick('tickets_only')}
+        >
+          🎟️ Ticket Scanner (1.25h)
+        </button>
+        <button 
+          class="preset-chip {currentPreset === 'mom_backstage' ? 'active' : ''}" 
+          onclick={() => handleChipClick('mom_backstage')}
+        >
+          👗 Mom Backstage Care
+        </button>
+        <button 
+          class="preset-chip reset {currentPreset === 'reset' ? 'active' : ''}" 
+          onclick={() => handleChipClick('reset')}
+        >
+          🔄 Show All ({slots.length})
+        </button>
+      </div>
+
+      <button 
+        type="button" 
+        class="carousel-arrow arrow-right" 
+        onclick={() => scrollPresets('right')} 
+        aria-label="Scroll presets right"
+      >
+        ›
       </button>
     </div>
   </section>
@@ -867,12 +972,12 @@
     color: var(--accent-emerald);
   }
 
-  /* Presets Bar (Swipe on mobile) */
+  /* Presets Bar */
   .presets-section {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 12px 16px;
+    padding: 10px 14px;
     margin-bottom: 18px;
     display: flex;
     align-items: center;
@@ -881,13 +986,6 @@
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .presets-section::-webkit-scrollbar {
-    display: none;
   }
 
   .preset-label {
@@ -900,11 +998,75 @@
     flex-shrink: 0;
   }
 
-  .preset-buttons {
+  .presets-carousel-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .preset-buttons-scroll {
     display: flex;
     gap: 8px;
     flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding: 4px 2px;
+    width: 100%;
+    min-width: 0;
+    cursor: grab;
+    user-select: none;
+    touch-action: pan-x;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  }
+
+  .preset-buttons-scroll:active {
+    cursor: grabbing;
+  }
+
+  .preset-buttons-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .preset-buttons-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .preset-buttons-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+  }
+
+  .preset-buttons-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  .carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-main);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
     flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .carousel-arrow:hover {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: #fff;
   }
 
   .preset-chip {
@@ -918,17 +1080,19 @@
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.2s;
+    flex-shrink: 0;
   }
 
-  .preset-chip:hover, .preset-chip:active {
+  .preset-chip:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: #3b82f6;
   }
 
   .preset-chip.active {
-    background: rgba(37, 99, 235, 0.25);
-    border-color: #3b82f6;
+    background: rgba(37, 99, 235, 0.3);
+    border-color: #38bdf8;
     color: #93c5fd;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
   }
 
   .preset-chip.reset {
@@ -1589,6 +1753,22 @@
 
     .btn-import, .btn-external {
       justify-content: center;
+    }
+
+    /* Mobile Presets */
+    .presets-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 10px 12px;
+    }
+
+    .presets-carousel-wrap {
+      width: 100%;
+    }
+
+    .carousel-arrow {
+      display: none;
     }
 
     /* Mobile Collapsible Filters */
